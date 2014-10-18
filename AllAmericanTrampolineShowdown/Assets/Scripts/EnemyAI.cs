@@ -25,7 +25,7 @@ public class EnemyAI : MonoBehaviour {
             if(playerInfo.collider.tag == "Player")
             {
                 print("There is something in front of the object!");
-                this.GetComponentInChildren<EnemyFire>().FIRE = true;
+                CallFire();
             }
         }
         else if (Physics.Raycast(transform.position, upAngle, out playerInfo, 15))
