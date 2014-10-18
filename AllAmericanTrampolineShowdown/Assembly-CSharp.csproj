@@ -46,11 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BurgerHit.cs" />
-     <Compile Include="Assets\FakeBounceSim.cs" />
+     <Compile Include="Assets\Scripts\BurgerHit.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyFire.cs" />
      <Compile Include="Assets\Scripts\FPBS.cs" />
+     <Compile Include="Assets\Scripts\FakeBounceSim.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\8 Bit Retro Rampage Free\Readme.txt" />
  <Reference Include="UnityEngine.UI">

@@ -6,9 +6,9 @@ public class EnemyAI : MonoBehaviour {
     public GameObject thisEnemy;
     // Use this for initialization
 	void Start () {
-        animation.Play();
-        animation["OtherPlayerInflate"].speed = 0;
-        animation["OtherPlayerInflate"].time = 0;
+        GetComponentInChildren<Animation>().Play();
+        GetComponentInChildren<Animation>()["OtherPlayerInflate"].speed = 0;
+        GetComponentInChildren<Animation>()["OtherPlayerInflate"].time = 0;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +20,7 @@ public class EnemyAI : MonoBehaviour {
         Debug.DrawRay(this.transform.position, upAngle, Color.blue);
         Debug.DrawRay(this.transform.position, downAngle, Color.green);
         RaycastHit playerInfo;
-        if (Physics.Raycast(transform.position, fwd, out playerInfo, 10))
+        if (Physics.Raycast(transform.position, fwd, out playerInfo, 15))
         {
             if(playerInfo.collider.tag == "Player")
             {
@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour {
                 this.GetComponentInChildren<EnemyFire>().FIRE = true;
             }
         }
-        else if (Physics.Raycast(transform.position, upAngle, out playerInfo, 10))
+        else if (Physics.Raycast(transform.position, upAngle, out playerInfo, 15))
         {
             //print("ABOVE CHECK");
             if (playerInfo.collider.tag == "Player")
@@ -37,7 +37,7 @@ public class EnemyAI : MonoBehaviour {
                 Invoke("CallFire", 1);
             }
         }
-        else if (Physics.Raycast(transform.position, downAngle, out playerInfo, 10))
+        else if (Physics.Raycast(transform.position, downAngle, out playerInfo, 15))
         {
             if (playerInfo.collider.tag == "Player")
             {
