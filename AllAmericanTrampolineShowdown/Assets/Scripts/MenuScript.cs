@@ -1,47 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PauseScript : MonoBehaviour{
+public class MenuScript : MonoBehaviour {
 
-    bool paused;
-    public GameObject pauseMenu;
+    public GameObject mainMenu;
+    public GameObject credits;
     public GameObject settings;
 
-    void Start () {
-        pauseMenu.SetActive(false);
+	// Use this for initialization
+	void Start () {
+        mainMenu.SetActive(true);
+        credits.SetActive(false);
         settings.SetActive(false);
-    }
-
-    void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (paused)
-            {
-                pauseMenu.SetActive(false);
-                settings.SetActive(false);
-                paused = false;
-            }
-            else
-            {
-                pauseMenu.SetActive(true);
-                settings.SetActive(false);
-                paused = true;
-            }
-        }
-    }
+	}
 
     public void Back () {
-        pauseMenu.SetActive(true);
+        mainMenu.SetActive(true);
+        credits.SetActive(false);
         settings.SetActive(false);
     }
 
-    public void MainMenu () {
-        Application.LoadLevel(0);
+    public void Credits () {
+        mainMenu.SetActive(false);
+        credits.SetActive(true);
     }
 
-    public void Resume () {
-        pauseMenu.SetActive(false);
-        paused = false;
+    public void Play () {
+        Application.LoadLevel(1);
     }
 
     public void Quit () {
@@ -49,7 +34,7 @@ public class PauseScript : MonoBehaviour{
     }
 
     public void Settings () {
-        pauseMenu.SetActive(false);
+        mainMenu.SetActive(false);
         settings.SetActive(true);
     }
 }
