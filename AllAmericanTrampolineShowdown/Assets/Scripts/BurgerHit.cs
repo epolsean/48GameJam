@@ -46,8 +46,6 @@ public class BurgerHit : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log(this.gameObject.tag);
-        Debug.Log(other.name);
         if(other.tag == "Player")
         {
             print("player is hit!");
@@ -131,24 +129,11 @@ public class BurgerHit : MonoBehaviour {
         {
             if (this.gameObject.tag == "Player1Bullet")
             {
-                Debug.Log("player pickup 3");
+                player1.GetComponent<FPBS>().power3 = 3;
             }
             else if (this.gameObject.tag == "Player2Bullet")
             {
-                Debug.Log("AI pickup 3");
-            }
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
-        }
-        else if (other.name == "Pickup4(Clone)")
-        {
-            if (this.gameObject.tag == "Player1Bullet")
-            {
-                Debug.Log("player pickup 4");
-            }
-            else if (this.gameObject.tag == "Player2Bullet")
-            {
-                Debug.Log("AI pickup 4");
+                player2.GetComponent<FPBS>().power3 = 3;
             }
             Destroy(other.gameObject);
             Destroy(this.gameObject);
