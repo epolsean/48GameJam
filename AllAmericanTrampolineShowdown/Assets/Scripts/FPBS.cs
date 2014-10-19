@@ -27,7 +27,7 @@ public class FPBS : MonoBehaviour {
             if(CanFire)
             {
                 CanFire = false;
-                IntBurg = Random.Range(0, 2);
+                IntBurg = Random.Range(0, 3);
                 if(IntBurg >= 2)
                 {
                     Burger2Throw = demFries;
