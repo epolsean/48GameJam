@@ -20,21 +20,22 @@ public class PickupSpawnerScript : MonoBehaviour
         }
         transform.position += new Vector3(0,moveDir,0);
 
-        if(Random.Range(1,1000) <= 100f && canSpawn)
+        if(Random.Range(1,1000) <= 10f && canSpawn)
         {
             Instantiate(pickup, transform.position, Quaternion.identity);
         }
 	}
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "pickup")
         {
+            Debug.Log("Entered");
             canSpawn = false;
         }
     }
 
-    void OnCollisionExit(Collision col)
+    void OnTriggerExit(Collider col)
     {
         if (col.gameObject.tag == "pickup")
         {

@@ -53,5 +53,10 @@ public class BurgerHit : MonoBehaviour {
             print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
             Destroy(this.gameObject);
         }
+        if (other.tag == "pickup")
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }
