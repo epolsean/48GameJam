@@ -35,7 +35,7 @@ public class Instructions : MonoBehaviour {
         {
             if (playAnim)
             {
-
+                player1.GetComponent<Animation>().Play("stepMoveLeftRight");
                 playAnim = false;
             }
             step1_5.SetActive(false);
@@ -45,7 +45,7 @@ public class Instructions : MonoBehaviour {
         {
             if (playAnim)
             {
-                GetComponent<Animation>().Play(
+                player1.GetComponent<Animation>().Play("upAndDown");
                 playAnim = false;
             }
             step2.SetActive(false);
