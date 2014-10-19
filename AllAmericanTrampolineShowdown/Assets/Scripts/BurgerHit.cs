@@ -4,9 +4,24 @@ using System.Collections;
 public class BurgerHit : MonoBehaviour {
 
     public GameObject BounceController;
+    public GameObject player1;
+    public GameObject player2;
+
     // Use this for initialization
 	void Start () {
         BounceController = GameObject.Find("FakeBounceController");
+        if (GameObject.Find("Player01") != null)
+        {
+            player1 = GameObject.Find("Player01");
+        }
+        if (GameObject.Find("Player02") != null)
+        {
+            player2 = GameObject.Find("Player02");
+        }
+        if(GameObject.Find("EnemyAI") != null)
+        {
+            player2 = GameObject.Find("EnemyAI");
+        }
 	}
 	
 	// Update is called once per frame
@@ -16,6 +31,8 @@ public class BurgerHit : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log(this.gameObject.tag);
+        Debug.Log(other.name);
         if(other.tag == "Player")
         {
             print("player is hit!");
@@ -61,8 +78,59 @@ public class BurgerHit : MonoBehaviour {
             print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
             Destroy(this.gameObject);
         }
-        if (other.tag == "pickup")
+        if (other.name == "Pickup1(Clone)")
         {
+            if (this.gameObject.tag == "Player1Bullet")
+            {
+                Debug.Log("player pickup 1");
+                player1.GetComponentInChildren<FPBS>().hasFlameBurg = true;
+            }
+            else if (this.gameObject.tag == "Player2Bullet")
+            {
+                Debug.Log("AI pickup 1");
+                player2.GetComponent<FPBS>().hasFlameBurg = true;
+            }
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if (other.name == "Pickup2(Clone)")
+        {
+            if (this.gameObject.tag == "Player1Bullet")
+            {
+                Debug.Log("player pickup 2");
+                player1.GetComponent<FPBS>().hasTripBurg = true;
+            }
+            else if (this.gameObject.tag == "Player2Bullet")
+            {
+                Debug.Log("AI pickup 2");
+                player2.GetComponent<FPBS>().hasTripBurg = true;
+            }
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if (other.name == "Pickup3(Clone)")
+        {
+            if (this.gameObject.tag == "Player1Bullet")
+            {
+                Debug.Log("player pickup 3");
+            }
+            else if (this.gameObject.tag == "Player2Bullet")
+            {
+                Debug.Log("AI pickup 3");
+            }
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if (other.name == "Pickup4(Clone)")
+        {
+            if (this.gameObject.tag == "Player1Bullet")
+            {
+                Debug.Log("player pickup 4");
+            }
+            else if (this.gameObject.tag == "Player2Bullet")
+            {
+                Debug.Log("AI pickup 4");
+            }
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
