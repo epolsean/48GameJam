@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: 1f4203be0e90342dfa9ea76f2ba3a4b0
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: be_finger_l_01
+    100002: be_finger_l_02
+    100004: be_head_01
+    100006: bind_ankl_l_01
+    100008: bind_ankl_r_01
+    100010: bind_elbow_l_01
+    100012: bind_elbow_l_02
+    100014: bind_finger_l_01
+    100016: bind_finger_l_02
+    100018: bind_hip_l_01
+    100020: bind_hip_r_01
+    100022: bind_jiggle_01
+    100024: bind_kneck_01
+    100026: bind_knee_l_01
+    100028: bind_knee_r_01
+    100030: bind_pelvis_01
+    100032: bind_shoulder_l_01
+    100034: bind_shoulder_l_02
+    100036: bind_spine_l_01
+    100038: bind_wrist_l_01
+    100040: bind_wrist_l_02
+    100042: //RootNode
+    100044: je_ankl_l_01
+    100046: je_ankl_r_01
+    100048: pCube5
+    100050: Root_01
+    400000: be_finger_l_01
+    400002: be_finger_l_02
+    400004: be_head_01
+    400006: bind_ankl_l_01
+    400008: bind_ankl_r_01
+    400010: bind_elbow_l_01
+    400012: bind_elbow_l_02
+    400014: bind_finger_l_01
+    400016: bind_finger_l_02
+    400018: bind_hip_l_01
+    400020: bind_hip_r_01
+    400022: bind_jiggle_01
+    400024: bind_kneck_01
+    400026: bind_knee_l_01
+    400028: bind_knee_r_01
+    400030: bind_pelvis_01
+    400032: bind_shoulder_l_01
+    400034: bind_shoulder_l_02
+    400036: bind_spine_l_01
+    400038: bind_wrist_l_01
+    400040: bind_wrist_l_02
+    400042: //RootNode
+    400044: je_ankl_l_01
+    400046: je_ankl_r_01
+    400048: pCube5
+    400050: Root_01
+    4300000: pCube5
+    7400000: NeutralBounce
+    7400002: ToLowBounce
+    7400004: LowBounce
+    7400006: ToHighBounce
+    7400008: Highbounce
+    7400010: Throw
+    7400012: IdleFreeze
+    9500000: //RootNode
+    13700000: pCube5
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: NeutralBounce
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 57
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube5
+        weight: 1
+      - path: Root_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01/je_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01/je_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_jiggle_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01/be_head_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01/be_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02/be_finger_l_02
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ToLowBounce
+      takeName: Take 001
+      firstFrame: 93
+      lastFrame: 116
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube5
+        weight: 1
+      - path: Root_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01/je_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01/je_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_jiggle_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01/be_head_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01/be_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02/be_finger_l_02
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: LowBounce
+      takeName: Take 001
+      firstFrame: 116
+      lastFrame: 148
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube5
+        weight: 1
+      - path: Root_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01/je_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01/je_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_jiggle_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01/be_head_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01/be_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02/be_finger_l_02
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ToHighBounce
+      takeName: Take 001
+      firstFrame: 197
+      lastFrame: 214
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube5
+        weight: 1
+      - path: Root_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01/je_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01/je_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_jiggle_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01/be_head_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01/be_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02/be_finger_l_02
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Highbounce
+      takeName: Take 001
+      firstFrame: 214
+      lastFrame: 255
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube5
+        weight: 1
+      - path: Root_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01/je_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01/je_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_jiggle_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01/be_head_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01/be_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02/be_finger_l_02
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Throw
+      takeName: Take 001
+      firstFrame: 298
+      lastFrame: 383
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube5
+        weight: 1
+      - path: Root_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01/je_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01/je_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_jiggle_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01/be_head_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01/be_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02/be_finger_l_02
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: IdleFreeze
+      takeName: Take 001
+      firstFrame: 69
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pCube5
+        weight: 1
+      - path: Root_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_l_01/bind_knee_l_01/bind_ankl_l_01/je_ankl_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_hip_r_01/bind_knee_r_01/bind_ankl_r_01/je_ankl_r_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_jiggle_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_kneck_01/be_head_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_01/bind_elbow_l_01/bind_wrist_l_01/bind_finger_l_01/be_finger_l_01
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02
+        weight: 1
+      - path: Root_01/bind_pelvis_01/bind_spine_l_01/bind_shoulder_l_02/bind_elbow_l_02/bind_wrist_l_02/bind_finger_l_02/be_finger_l_02
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .649999976
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: Root_01
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

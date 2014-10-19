@@ -27,7 +27,26 @@ public class FakeBounceSim : MonoBehaviour {
 	void Start () {
         fallSoundController = GameObject.Find("LosingSoundController");
 	}
-	
+
+    public void SetBouncyFalse()
+    {
+        Player.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetBool("Bouncy", false);
+    }
+
+    public void SetLowBounceFalse()
+    {
+        Player.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetBool("lowBounce", false);
+    }
+
+    public void SetHighBounceFalse()
+    {
+        Player.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetBool("highBounce", false);
+    }
+
+    public void SetEnemyBouncyFalse()
+    {
+        OtherPlayer.GetComponentInChildren<EnemyAI>().EnemyAnim.SetBool("Bouncy", false);
+    }
 	// Update is called once per frame
 	void Update () {
 	    if(Player.transform.position.y <= 1.5)
@@ -51,8 +70,26 @@ public class FakeBounceSim : MonoBehaviour {
                     }
                 }
                 PlayerTrampoline.GetComponent<TestTramp>().TrampAnim.SetBool("CanBounce", true);
+                if(Input.GetKey(KeyCode.W))
+                {
+                    Player.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetBool("highBounce", true);
+                    Invoke("SetHighBounceFalse", 1);
+                }
+                else if(Input.GetKey(KeyCode.S))
+                {
+                    Player.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetBool("lowBounce", true);
+                    Invoke("SetLowBounceFalse", 1);
+                }
+                else
+                {
+                    Player.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetBool("Bouncy", true);
+                    Invoke("SetBouncyFalse", 2);
+                }
+                
                 Player.rigidbody.velocity = transform.TransformDirection(Vector3.up * PlayerBounceSpeed);
                 PlayerTrampoline.audio.Play();
+                
+                
             }
             else
             {
@@ -85,6 +122,8 @@ public class FakeBounceSim : MonoBehaviour {
                     }
                 }
                 OtherTrampoline.GetComponent<TestTramp>().TrampAnim.SetBool("CanBounce", true);
+                OtherPlayer.GetComponentInChildren<EnemyAI>().EnemyAnim.SetBool("Bouncy", true);
+                Invoke("SetEnemyBouncyFalse", 2);
                 OtherPlayer.rigidbody.velocity = transform.TransformDirection(Vector3.up * OtherPlayerBounceSpeed);
                 OtherTrampoline.audio.Play();
             }

@@ -4,11 +4,13 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour {
 
     public GameObject thisEnemy;
+    public Animator EnemyAnim;
     // Use this for initialization
 	void Start () {
         GetComponentInChildren<Animation>().Play();
-        GetComponentInChildren<Animation>()["OtherPlayerInflate"].speed = 0;
-        GetComponentInChildren<Animation>()["OtherPlayerInflate"].time = 0;
+        GetComponentInChildren<Animation>()["CharacterFatness"].speed = 0;
+        GetComponentInChildren<Animation>()["CharacterFatness"].time = 0;
+        EnemyAnim = GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
