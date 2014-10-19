@@ -7,6 +7,8 @@ public class BurgerHit : MonoBehaviour {
     public GameObject player1;
     public GameObject player2;
 
+    float endTime = 0;
+
     // Use this for initialization
 	void Start () {
         BounceController = GameObject.Find("FakeBounceController");
@@ -23,11 +25,24 @@ public class BurgerHit : MonoBehaviour {
             player2 = GameObject.Find("EnemyAI");
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    void Update()
+    {
+        if(endTime <= Time.time && endTime != 0)
+        {
+            Application.LoadLevel(3);
+        }
+        print(endTime);
+    }
+
+    /*public void GoToEnd()
+    {
+        Application.LoadLevel(3);
+    }
+    public void ToEnd()
+    {
+        Invoke("GoToEnd", 3);
+    }*/
 
     public void OnTriggerEnter(Collider other)
     {
@@ -55,9 +70,11 @@ public class BurgerHit : MonoBehaviour {
             if (other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time >= 1)
             {
                 //other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time = 1;
+                endTime = Time.time + 3;
                 BounceController.GetComponent<FakeBounceSim>().isPlayerFattist = true;
                 BounceController.GetComponent<FakeBounceSim>().PlayerTrampoline.GetComponent<TestTramp>().AnimTop.SetActive(false);
                 BounceController.GetComponent<FakeBounceSim>().PlayerTrampoline.GetComponent<TestTramp>().TareTop.SetActive(true);
+                //Invoke("GoToEnd", 3);
             }
             //print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
             Destroy(this.gameObject);
@@ -71,9 +88,11 @@ public class BurgerHit : MonoBehaviour {
             if (other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time >= 1)
             {
                 //other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time = 1;
+                endTime = Time.time + 3;
                 BounceController.GetComponent<FakeBounceSim>().isOtherFattist = true;
                 BounceController.GetComponent<FakeBounceSim>().OtherTrampoline.GetComponent<TestTramp>().AnimTop.SetActive(false);
                 BounceController.GetComponent<FakeBounceSim>().OtherTrampoline.GetComponent<TestTramp>().TareTop.SetActive(true);
+                //Invoke("GoToEnd", 3);
             }
             print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time);
             Destroy(this.gameObject);
