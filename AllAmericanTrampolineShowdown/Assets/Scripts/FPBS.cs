@@ -18,10 +18,13 @@ public class FPBS : MonoBehaviour {
     public int BurgerSpeed = 20;
     public bool CanFire = true;
     public int IntBurg;
+    public Animator playerAnim;
+    public GameObject player01;
 
     // Use this for initialization
 	void Start () {
-	
+        player01 = GameObject.Find("Player01");
+        playerAnim = player01.GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -31,6 +34,7 @@ public class FPBS : MonoBehaviour {
             if(CanFire)
             {
                 CanFire = false;
+                player01.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetTrigger("Throw");
                 IntBurg = Random.Range(0, 3);
                 if(IntBurg >= 2)
                 {

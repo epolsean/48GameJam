@@ -51,10 +51,10 @@ public class BurgerHit : MonoBehaviour {
             }
             BounceController.GetComponent<FakeBounceSim>().Player1MaxHeight--;
             //other.GetComponentInChildren<Animation>().Play();
-            other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time += 0.15f;
-            if (other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time >= 0.6)
+            other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time += 0.15f;
+            if (other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time >= 1)
             {
-                other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time = 1;
+                //other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time = 1;
                 BounceController.GetComponent<FakeBounceSim>().isPlayerFattist = true;
                 BounceController.GetComponent<FakeBounceSim>().PlayerTrampoline.GetComponent<TestTramp>().AnimTop.SetActive(false);
                 BounceController.GetComponent<FakeBounceSim>().PlayerTrampoline.GetComponent<TestTramp>().TareTop.SetActive(true);
@@ -67,15 +67,15 @@ public class BurgerHit : MonoBehaviour {
             BounceController.GetComponent<FakeBounceSim>().Player.audio.Play();
             BounceController.GetComponent<FakeBounceSim>().OtherPlayerBounceSpeed--;
             //other.GetComponentInChildren<Animation>().Play();
-            other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time += 0.15f;
-            if (other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time >= 0.6)
+            other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time += 0.15f;
+            if (other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time >= 1)
             {
-                other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time = 1;
+                //other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time = 1;
                 BounceController.GetComponent<FakeBounceSim>().isOtherFattist = true;
                 BounceController.GetComponent<FakeBounceSim>().OtherTrampoline.GetComponent<TestTramp>().AnimTop.SetActive(false);
                 BounceController.GetComponent<FakeBounceSim>().OtherTrampoline.GetComponent<TestTramp>().TareTop.SetActive(true);
             }
-            print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
+            print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time);
             Destroy(this.gameObject);
         }
         if (other.name == "Pickup1(Clone)")
