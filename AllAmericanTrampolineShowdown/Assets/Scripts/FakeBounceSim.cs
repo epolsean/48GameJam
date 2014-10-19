@@ -7,6 +7,12 @@ public class FakeBounceSim : MonoBehaviour {
     public GameObject OtherPlayer;
     public int PlayerBounceSpeed = 14;
     public int OtherPlayerBounceSpeed = 14;
+
+    public int Player1MaxHeight = 15;
+    public int Player1MinHeight = 8;
+    public int Player2MaxHeight = 15;
+    public int Player2MinHeight = 8;
+
     public bool isPlayerFattist = false;
     public bool isOtherFattist = false;
     public bool canPlayMusic = true; 
@@ -30,6 +36,20 @@ public class FakeBounceSim : MonoBehaviour {
             //Player.GetComponent<CharacterController>().velocity.Equals(Vector3.up * BounceSpeed);
             if (!isPlayerFattist)
             {
+                if (Input.GetAxis("Vertical") == 1)
+                {
+                    if (PlayerBounceSpeed < Player1MaxHeight)
+                    {
+                        PlayerBounceSpeed++;
+                    }
+                }
+                else if (Input.GetAxis("Vertical") == -1)
+                {
+                    if (PlayerBounceSpeed > Player1MinHeight)
+                    {
+                        PlayerBounceSpeed--;
+                    }
+                }
                 PlayerTrampoline.GetComponent<TestTramp>().TrampAnim.SetBool("CanBounce", true);
                 Player.rigidbody.velocity = transform.TransformDirection(Vector3.up * PlayerBounceSpeed);
                 PlayerTrampoline.audio.Play();
@@ -50,6 +70,20 @@ public class FakeBounceSim : MonoBehaviour {
             //OtherPlayer.GetComponent<CharacterController>().velocity.Equals(Vector3.up * BounceSpeed);
             if (!isOtherFattist)
             {
+                if (Input.GetAxis("Vertical2") == 1)
+                {
+                    if (OtherPlayerBounceSpeed < Player2MaxHeight)
+                    {
+                        OtherPlayerBounceSpeed++;
+                    }
+                }
+                else if (Input.GetAxis("Vertical2") == -1)
+                {
+                    if (OtherPlayerBounceSpeed > Player2MinHeight)
+                    {
+                        OtherPlayerBounceSpeed--;
+                    }
+                }
                 OtherTrampoline.GetComponent<TestTramp>().TrampAnim.SetBool("CanBounce", true);
                 OtherPlayer.rigidbody.velocity = transform.TransformDirection(Vector3.up * OtherPlayerBounceSpeed);
                 OtherTrampoline.audio.Play();

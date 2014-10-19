@@ -25,14 +25,5 @@ public class MovePlayer : MonoBehaviour
 
             GetComponent<Rigidbody>().velocity = new Vector3(-1 * newVec.x, GetComponent<Rigidbody>().velocity.y, GetComponent<Rigidbody>().velocity.z);
         }
-        if (Input.GetAxis("Vertical") == 1)
-        {
-            Debug.Log("Jump higher");
-            //GetComponent<Rigidbody>().AddForce(-2*GetComponent<Rigidbody>().mass * Vector3.up);
-        }
-        if (Input.GetAxis("Vertical") == -1)
-        {
-            //GetComponent<Rigidbody>().AddForce(2* GetComponent<Rigidbody>().mass * Vector3.up);
-        }
 	}
 }

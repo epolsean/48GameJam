@@ -28,7 +28,11 @@ public class BurgerHit : MonoBehaviour {
                 other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time = 1;
             }
             Destroy(this.gameObject);*/
-            BounceController.GetComponent<FakeBounceSim>().PlayerBounceSpeed--;
+            if (BounceController.GetComponent<FakeBounceSim>().PlayerBounceSpeed > BounceController.GetComponent<FakeBounceSim>().Player1MinHeight)
+            {
+                BounceController.GetComponent<FakeBounceSim>().PlayerBounceSpeed--;
+            }
+            BounceController.GetComponent<FakeBounceSim>().Player1MaxHeight--;
             //other.GetComponentInChildren<Animation>().Play();
             other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time += 0.15f;
             if (other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time >= 0.6)
