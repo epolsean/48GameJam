@@ -3,7 +3,10 @@ using System.Collections;
 
 public class PickupSpawnerScript : MonoBehaviour
 {
-    public GameObject pickup;
+    public GameObject pickup1;
+    public GameObject pickup2;
+    public GameObject pickup3;
+    public GameObject pickup4;
 
     float moveDir = 12f;
     bool canSpawn = true;
@@ -22,7 +25,23 @@ public class PickupSpawnerScript : MonoBehaviour
 
         if(Random.Range(1,1000) <= 2f && canSpawn && Time.timeScale == 1)
         {
-            Instantiate(pickup, transform.position, Quaternion.identity);
+            float pickNum = Random.Range(1, 4);
+            if (pickNum <= 1 && pickNum > 0)
+            {
+                Instantiate(pickup1, transform.position, Quaternion.identity);
+            }
+            else if (pickNum <= 2 && pickNum > 1)
+            {
+                Instantiate(pickup2, transform.position, Quaternion.identity);
+            }
+            else if (pickNum <= 3 && pickNum > 2)
+            {
+                Instantiate(pickup3, transform.position, Quaternion.identity);
+            }
+            else if (pickNum <= 4 && pickNum > 3)
+            {
+                Instantiate(pickup4, transform.position, Quaternion.identity);
+            }
         }
 	}
 
