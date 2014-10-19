@@ -22,7 +22,7 @@ public class FPBS : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetMouseButtonDown(0))
+	    if(Input.GetMouseButtonDown(0) || Input.GetButtonUp("Fire1"))
         {
             if(CanFire)
             {

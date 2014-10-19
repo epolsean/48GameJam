@@ -14,6 +14,8 @@ public class Instructions : MonoBehaviour {
 
     public GameObject player1;
 
+    public Animator instructAnim;
+
     bool playAnim = true;
 
     int curStep = 1;
@@ -33,21 +35,11 @@ public class Instructions : MonoBehaviour {
         }
         if (curStep == 2)
         {
-            if (playAnim)
-            {
-                player1.GetComponent<Animation>().Play("stepMoveLeftRight");
-                playAnim = false;
-            }
             step1_5.SetActive(false);
             step2.SetActive(true);
         }
         if (curStep == 3)
         {
-            if (playAnim)
-            {
-                player1.GetComponent<Animation>().Play("upAndDown");
-                playAnim = false;
-            }
             step2.SetActive(false);
             step3.SetActive(true);
         }
@@ -76,7 +68,7 @@ public class Instructions : MonoBehaviour {
             step1.SetActive(false);
             step1_5.SetActive(true);
         }
-        if (stepTimer < 0)
+        if (stepTimer < 0 && (curStep<7 || curStep==10))
         {
             if (curStep == 1)
             {

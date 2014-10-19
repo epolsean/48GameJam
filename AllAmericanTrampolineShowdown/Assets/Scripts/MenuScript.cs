@@ -34,7 +34,6 @@ public class MenuScript : MonoBehaviour {
     }
 
     public void Settings () {
-        mainMenu.SetActive(false);
-        settings.SetActive(true);
+        Application.LoadLevel("Instructions");
     }
 }
