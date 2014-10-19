@@ -13,6 +13,7 @@ public class FPBS : MonoBehaviour {
 
     public bool hasTripBurg = false;
     public bool hasFlameBurg = false;
+    public int power3 = 0;
     float powerUpTimer = 5.0f;
 
     public int BurgerSpeed = 20;
@@ -89,8 +90,17 @@ public class FPBS : MonoBehaviour {
         }
         Burger.velocity = transform.TransformDirection(Vector3.forward * BurgerSpeed);
         //Burger.AddForce(Vector3.forward * BurgerSpeed);
+        
         Destroy(Burger.gameObject, 2);
         audio.Play();
-        Invoke("ResetFire", 1);
+        if (power3 > 0)
+        {
+            Invoke("ResetFire", 0.5f);
+            power3--;
+        }
+        else
+        {
+            Invoke("ResetFire", 1);
+        }
     }
 }

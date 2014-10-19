@@ -6,7 +6,6 @@ public class PickupSpawnerScript : MonoBehaviour
     public GameObject pickup1;
     public GameObject pickup2;
     public GameObject pickup3;
-    public GameObject pickup4;
 
     float moveDir = 12f;
     bool canSpawn = true;
@@ -25,7 +24,7 @@ public class PickupSpawnerScript : MonoBehaviour
 
         if(Random.Range(1,1000) <= 2f && canSpawn && Time.timeScale == 1)
         {
-            float pickNum = Random.Range(1, 4);
+            float pickNum = Random.Range(1, 3);
             if (pickNum <= 1 && pickNum > 0)
             {
                 Instantiate(pickup1, transform.position, Quaternion.identity);
@@ -37,10 +36,6 @@ public class PickupSpawnerScript : MonoBehaviour
             else if (pickNum <= 3 && pickNum > 2)
             {
                 Instantiate(pickup3, transform.position, Quaternion.identity);
-            }
-            else if (pickNum <= 4 && pickNum > 3)
-            {
-                Instantiate(pickup4, transform.position, Quaternion.identity);
             }
         }
 	}
