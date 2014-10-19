@@ -5,11 +5,9 @@ public class PauseScript : MonoBehaviour{
 
     bool paused;
     public GameObject pauseMenu;
-    public GameObject settings;
 
     void Start () {
         pauseMenu.SetActive(false);
-        settings.SetActive(false);
     }
 
     void Update () {
@@ -18,14 +16,12 @@ public class PauseScript : MonoBehaviour{
             if (paused)
             {
                 pauseMenu.SetActive(false);
-                settings.SetActive(false);
                 paused = false;
                 Time.timeScale = 1;
             }
             else
             {
                 pauseMenu.SetActive(true);
-                settings.SetActive(false);
                 paused = true;
                 Time.timeScale = 0;
             }
@@ -34,7 +30,6 @@ public class PauseScript : MonoBehaviour{
 
     public void Back () {
         pauseMenu.SetActive(true);
-        settings.SetActive(false);
     }
 
     public void MainMenu () {
@@ -50,10 +45,5 @@ public class PauseScript : MonoBehaviour{
 
     public void Quit () {
         Application.Quit();
-    }
-
-    public void Settings () {
-        pauseMenu.SetActive(false);
-        settings.SetActive(true);
     }
 }
