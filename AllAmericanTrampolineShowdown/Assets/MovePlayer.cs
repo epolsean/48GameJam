@@ -3,8 +3,6 @@ using System.Collections;
 
 public class MovePlayer : MonoBehaviour 
 {
-    private Vector3 moveDirection = Vector3.zero;
-
 	// Use this for initialization
 	void Start () 
     {
