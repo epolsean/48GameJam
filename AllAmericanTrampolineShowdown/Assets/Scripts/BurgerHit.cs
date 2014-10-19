@@ -35,6 +35,8 @@ public class BurgerHit : MonoBehaviour {
             {
                 other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time = 1;
                 BounceController.GetComponent<FakeBounceSim>().isPlayerFattist = true;
+                BounceController.GetComponent<FakeBounceSim>().PlayerTrampoline.GetComponent<TestTramp>().AnimTop.SetActive(false);
+                BounceController.GetComponent<FakeBounceSim>().PlayerTrampoline.GetComponent<TestTramp>().TareTop.SetActive(true);
             }
             //print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
             Destroy(this.gameObject);
@@ -49,6 +51,8 @@ public class BurgerHit : MonoBehaviour {
             {
                 other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time = 1;
                 BounceController.GetComponent<FakeBounceSim>().isOtherFattist = true;
+                BounceController.GetComponent<FakeBounceSim>().OtherTrampoline.GetComponent<TestTramp>().AnimTop.SetActive(false);
+                BounceController.GetComponent<FakeBounceSim>().OtherTrampoline.GetComponent<TestTramp>().TareTop.SetActive(true);
             }
             print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
             Destroy(this.gameObject);

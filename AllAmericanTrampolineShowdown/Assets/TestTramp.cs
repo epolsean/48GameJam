@@ -4,7 +4,9 @@ using System.Collections;
 public class TestTramp : MonoBehaviour {
 
     public Animator TrampAnim;
-    public bool isBounce = false; 
+    public bool isBounce = false;
+    public GameObject AnimTop;
+    public GameObject TareTop;
 
     // Use this for initialization
 	void Start () {
