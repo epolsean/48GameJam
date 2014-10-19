@@ -30,6 +30,7 @@ public class FakeBounceSim : MonoBehaviour {
             //Player.GetComponent<CharacterController>().velocity.Equals(Vector3.up * BounceSpeed);
             if (!isPlayerFattist)
             {
+                PlayerTrampoline.GetComponent<TestTramp>().TrampAnim.SetBool("CanBounce", true);
                 Player.rigidbody.velocity = transform.TransformDirection(Vector3.up * PlayerBounceSpeed);
                 PlayerTrampoline.audio.Play();
             }
@@ -49,6 +50,7 @@ public class FakeBounceSim : MonoBehaviour {
             //OtherPlayer.GetComponent<CharacterController>().velocity.Equals(Vector3.up * BounceSpeed);
             if (!isOtherFattist)
             {
+                OtherTrampoline.GetComponent<TestTramp>().TrampAnim.SetBool("CanBounce", true);
                 OtherPlayer.rigidbody.velocity = transform.TransformDirection(Vector3.up * OtherPlayerBounceSpeed);
                 OtherTrampoline.audio.Play();
             }
