@@ -73,6 +73,7 @@ public class BurgerHit : MonoBehaviour {
                 BounceController.GetComponent<FakeBounceSim>().PlayerTrampoline.GetComponent<TestTramp>().AnimTop.SetActive(false);
                 BounceController.GetComponent<FakeBounceSim>().PlayerTrampoline.GetComponent<TestTramp>().TareTop.SetActive(true);
                 //Invoke("GoToEnd", 3);
+                GotKilled.DaEnd = true; 
             }
             //print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
             Destroy(this.gameObject);
@@ -91,6 +92,7 @@ public class BurgerHit : MonoBehaviour {
                 BounceController.GetComponent<FakeBounceSim>().OtherTrampoline.GetComponent<TestTramp>().AnimTop.SetActive(false);
                 BounceController.GetComponent<FakeBounceSim>().OtherTrampoline.GetComponent<TestTramp>().TareTop.SetActive(true);
                 //Invoke("GoToEnd", 3);
+                GotKilled.DaEnd = true;
             }
             print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["CharacterFatness"].time);
             Destroy(this.gameObject);
