@@ -25,7 +25,7 @@ public class EnemyFire : MonoBehaviour {
         shootTimer += Time.deltaTime;
         if(shootTimer >= 2 && FIRE)
         {
-            ThrowBurger();
+            Invoke("ThrowBurger", 0.7f);
             shootTimer = 0;
             FIRE = false;
             print("FIRE OFF");

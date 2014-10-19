@@ -52,5 +52,6 @@ public class EnemyAI : MonoBehaviour {
     void CallFire()
     {
         this.GetComponentInChildren<EnemyFire>().FIRE = true;
+        EnemyAnim.SetTrigger("Throw");
     }
 }

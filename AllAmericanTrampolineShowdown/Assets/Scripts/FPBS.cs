@@ -57,20 +57,7 @@ public class FPBS : MonoBehaviour {
                 {
                     Burger2Throw = TripBurg;
                 }
-                Rigidbody Burger = Instantiate(Burger2Throw, this.transform.position, this.transform.rotation) as Rigidbody;
-                if (this.gameObject.tag == "Player")
-                {
-                    Burger.gameObject.tag = "Player1Bullet";
-                }
-                else if (this.gameObject.tag == "Player02")
-                {
-                    Burger.gameObject.tag = "Player2Bullet";
-                }
-                Burger.velocity = transform.TransformDirection(Vector3.forward * BurgerSpeed);
-                //Burger.AddForce(Vector3.forward * BurgerSpeed);
-                Destroy(Burger.gameObject, 2);
-                audio.Play();
-                Invoke("ResetFire", 1);
+                Invoke("ThrowBurger", 0.8f);
             }
         }
         if (hasFlameBurg || hasTripBurg)
@@ -87,5 +74,23 @@ public class FPBS : MonoBehaviour {
     void ResetFire()
     {
         CanFire = true;
+    }
+
+    public void ThrowBurger()
+    {
+        Rigidbody Burger = Instantiate(Burger2Throw, this.transform.position, this.transform.rotation) as Rigidbody;
+        if (this.gameObject.tag == "Player")
+        {
+            Burger.gameObject.tag = "Player1Bullet";
+        }
+        else if (this.gameObject.tag == "Player02")
+        {
+            Burger.gameObject.tag = "Player2Bullet";
+        }
+        Burger.velocity = transform.TransformDirection(Vector3.forward * BurgerSpeed);
+        //Burger.AddForce(Vector3.forward * BurgerSpeed);
+        Destroy(Burger.gameObject, 2);
+        audio.Play();
+        Invoke("ResetFire", 1);
     }
 }

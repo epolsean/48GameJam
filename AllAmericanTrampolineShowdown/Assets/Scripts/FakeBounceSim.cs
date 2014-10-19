@@ -51,7 +51,7 @@ public class FakeBounceSim : MonoBehaviour {
 	void Update () {
 	    if(Player.transform.position.y <= 1.5)
         {
-            print("Player UP");
+            //print("Player UP");
             //Player.GetComponent<CharacterController>().velocity.Equals(Vector3.up * BounceSpeed);
             if (!isPlayerFattist)
             {
@@ -103,7 +103,7 @@ public class FakeBounceSim : MonoBehaviour {
         }
         if(OtherPlayer.transform.position.y <= 1.5)
         {
-            print("Other Player UP");
+            //print("Other Player UP");
             //OtherPlayer.GetComponent<CharacterController>().velocity.Equals(Vector3.up * BounceSpeed);
             if (!isOtherFattist)
             {
