@@ -9,6 +9,9 @@ public class FakeBounceSim : MonoBehaviour {
     public int OtherPlayerBounceSpeed = 14;
     public bool isPlayerFattist = false;
     public bool isOtherFattist = false;
+    public bool canPlayMusic = true; 
+
+    public GameObject fallSoundController; 
 
     public GameObject PlayerTrampoline;
     public GameObject OtherTrampoline; 
@@ -16,7 +19,7 @@ public class FakeBounceSim : MonoBehaviour {
 
     // Use this for initialization
 	void Start () {
-	
+        fallSoundController = GameObject.Find("LosingSoundController");
 	}
 	
 	// Update is called once per frame
@@ -32,7 +35,12 @@ public class FakeBounceSim : MonoBehaviour {
             }
             else
             {
-                //Player.GetComponent<Collider>().enabled = false; 
+                //Player.GetComponent<Collider>().enabled = false;
+                if (canPlayMusic)
+                {
+                    canPlayMusic = false;
+                    fallSoundController.audio.Play();
+                }
             }
         }
         if(OtherPlayer.transform.position.y <= 1.5)
@@ -47,6 +55,11 @@ public class FakeBounceSim : MonoBehaviour {
             else
             {
                 //OtherPlayer.GetComponent<Collider>().enabled = false; 
+                if(canPlayMusic)
+                {
+                    canPlayMusic = false; 
+                    fallSoundController.audio.Play();
+                }
             }
         }
 	}
