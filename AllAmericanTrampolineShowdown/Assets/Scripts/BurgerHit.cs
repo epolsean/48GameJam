@@ -39,7 +39,7 @@ public class BurgerHit : MonoBehaviour {
             //print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
             Destroy(this.gameObject);
         }
-        else if(other.tag == "Player02")
+        if(other.tag == "Player02")
         {
             BounceController.GetComponent<FakeBounceSim>().Player.audio.Play();
             BounceController.GetComponent<FakeBounceSim>().OtherPlayerBounceSpeed--;
@@ -51,11 +51,6 @@ public class BurgerHit : MonoBehaviour {
                 BounceController.GetComponent<FakeBounceSim>().isOtherFattist = true;
             }
             print("Animation Time: " + other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time);
-            Destroy(this.gameObject);
-        }
-        else if (other.tag == "pickup")
-        {
-            Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
     }
