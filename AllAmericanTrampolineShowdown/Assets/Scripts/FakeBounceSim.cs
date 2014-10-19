@@ -8,7 +8,10 @@ public class FakeBounceSim : MonoBehaviour {
     public int PlayerBounceSpeed = 14;
     public int OtherPlayerBounceSpeed = 14;
     public bool isPlayerFattist = false;
-    public bool isOtherFattist = false; 
+    public bool isOtherFattist = false;
+
+    public GameObject PlayerTrampoline;
+    public GameObject OtherTrampoline; 
 
 
     // Use this for initialization
@@ -25,10 +28,11 @@ public class FakeBounceSim : MonoBehaviour {
             if (!isPlayerFattist)
             {
                 Player.rigidbody.velocity = transform.TransformDirection(Vector3.up * PlayerBounceSpeed);
+                PlayerTrampoline.audio.Play();
             }
             else
             {
-                Player.GetComponent<Collider>().enabled = false; 
+                //Player.GetComponent<Collider>().enabled = false; 
             }
         }
         if(OtherPlayer.transform.position.y <= 1.5)
@@ -38,10 +42,11 @@ public class FakeBounceSim : MonoBehaviour {
             if (!isOtherFattist)
             {
                 OtherPlayer.rigidbody.velocity = transform.TransformDirection(Vector3.up * OtherPlayerBounceSpeed);
+                OtherTrampoline.audio.Play();
             }
             else
             {
-                OtherPlayer.GetComponent<Collider>().enabled = false; 
+                //OtherPlayer.GetComponent<Collider>().enabled = false; 
             }
         }
 	}
