@@ -45,7 +45,7 @@ public class Instructions : MonoBehaviour {
         {
             if (playAnim)
             {
-                GetComponent<Animation>().Play(
+                //GetComponent<Animation>().Play(
                 playAnim = false;
             }
             step2.SetActive(false);

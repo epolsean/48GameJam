@@ -20,12 +20,14 @@ public class PauseScript : MonoBehaviour{
                 pauseMenu.SetActive(false);
                 settings.SetActive(false);
                 paused = false;
+                Time.timeScale = 1;
             }
             else
             {
                 pauseMenu.SetActive(true);
                 settings.SetActive(false);
                 paused = true;
+                Time.timeScale = 0;
             }
         }
     }
@@ -37,11 +39,13 @@ public class PauseScript : MonoBehaviour{
 
     public void MainMenu () {
         Application.LoadLevel(0);
+        Time.timeScale = 1;
     }
 
     public void Resume () {
         pauseMenu.SetActive(false);
         paused = false;
+        Time.timeScale = 1;
     }
 
     public void Quit () {

@@ -5,7 +5,7 @@ public class PickupSpawnerScript : MonoBehaviour
 {
     public GameObject pickup;
 
-    float moveDir = 0.2f;
+    float moveDir = 12f;
     bool canSpawn = true;
 	
 	// Update is called once per frame
@@ -18,9 +18,9 @@ public class PickupSpawnerScript : MonoBehaviour
         {
             moveDir = -moveDir;
         }
-        transform.position += new Vector3(0,moveDir,0);
+        transform.position += new Vector3(0,moveDir*Time.deltaTime,0);
 
-        if(Random.Range(1,1000) <= 2f && canSpawn)
+        if(Random.Range(1,1000) <= 2f && canSpawn && Time.timeScale == 1)
         {
             Instantiate(pickup, transform.position, Quaternion.identity);
         }

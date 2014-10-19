@@ -12,7 +12,7 @@ public class PickupScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(Vector3.up, 1, Space.Self);
+        transform.Rotate(Vector3.up, 40*Time.deltaTime, Space.Self);
         if (Time.time >= lifeTime)
         {
             Destroy(this.gameObject);
