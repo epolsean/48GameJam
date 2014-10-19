@@ -19,7 +19,6 @@ public class BurgerHit : MonoBehaviour {
         if(other.tag == "Player")
         {
             print("player is hit!");
-            BounceController.GetComponent<FakeBounceSim>().OtherPlayer.audio.Play();
             //BounceController.GetComponent<FakeBounceSim>().PlayerBounceSpeed++;
             /*BounceController.GetComponent<FakeBounceSim>().PlayerBounceSpeed--;
             other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time += 0.15f;
@@ -41,7 +40,6 @@ public class BurgerHit : MonoBehaviour {
         }
         else if(other.tag == "Player02")
         {
-            BounceController.GetComponent<FakeBounceSim>().Player.audio.Play();
             BounceController.GetComponent<FakeBounceSim>().OtherPlayerBounceSpeed--;
             //other.GetComponentInChildren<Animation>().Play();
             other.GetComponentInChildren<Animation>().animation["OtherPlayerInflate"].time += 0.15f;
