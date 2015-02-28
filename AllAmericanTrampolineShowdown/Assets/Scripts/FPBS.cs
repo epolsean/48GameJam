@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class FPBS : MonoBehaviour {
 
@@ -10,6 +12,9 @@ public class FPBS : MonoBehaviour {
     public Rigidbody datDrink;
     public Rigidbody FlameBurg;
     public Rigidbody TripBurg;
+
+    public Button MobileButtonDown;
+    public EventSystem eventSys;
 
     public bool hasTripBurg = false;
     public bool hasFlameBurg = false;
@@ -30,7 +35,7 @@ public class FPBS : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetMouseButtonDown(0) || Input.GetButtonUp("Fire1"))
+        if (Input.GetMouseButtonDown(0) || Input.GetButtonUp("Fire1") || eventSys.currentSelectedGameObject == MobileButtonDown.gameObject)
         {
             if(CanFire)
             {
