@@ -35,7 +35,7 @@ public class FPBS : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0) || Input.GetButtonUp("Fire1") || eventSys.currentSelectedGameObject == MobileButtonDown.gameObject)
+        if (eventSys.currentSelectedGameObject == MobileButtonDown.gameObject)
         {
             if(CanFire)
             {

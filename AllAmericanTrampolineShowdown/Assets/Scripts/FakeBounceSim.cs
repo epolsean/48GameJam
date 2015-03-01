@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class FakeBounceSim : MonoBehaviour {
 
@@ -15,7 +17,11 @@ public class FakeBounceSim : MonoBehaviour {
 
     public bool isPlayerFattist = false;
     public bool isOtherFattist = false;
-    public bool canPlayMusic = true; 
+    public bool canPlayMusic = true;
+
+    public Button mobileMoveUp;
+    public Button mobileMoveDown;
+    public EventSystem eventSys;
 
     public GameObject fallSoundController; 
 
@@ -55,14 +61,14 @@ public class FakeBounceSim : MonoBehaviour {
             //Player.GetComponent<CharacterController>().velocity.Equals(Vector3.up * BounceSpeed);
             if (!isPlayerFattist)
             {
-                if (Input.GetAxis("Vertical") == 1)
+                if (Input.GetAxis("Vertical") == 1 || eventSys.currentSelectedGameObject == mobileMoveUp.gameObject)
                 {
                     if (PlayerBounceSpeed < Player1MaxHeight)
                     {
                         PlayerBounceSpeed++;
                     }
                 }
-                else if (Input.GetAxis("Vertical") == -1)
+                else if (Input.GetAxis("Vertical") == -1 || eventSys.currentSelectedGameObject == mobileMoveDown.gameObject)
                 {
                     if (PlayerBounceSpeed > Player1MinHeight)
                     {
@@ -70,12 +76,12 @@ public class FakeBounceSim : MonoBehaviour {
                     }
                 }
                 PlayerTrampoline.GetComponent<TestTramp>().TrampAnim.SetBool("CanBounce", true);
-                if(Input.GetKey(KeyCode.W))
+                if (Input.GetKey(KeyCode.W) || eventSys.currentSelectedGameObject == mobileMoveUp.gameObject)
                 {
                     Player.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetBool("highBounce", true);
                     Invoke("SetHighBounceFalse", 1);
                 }
-                else if(Input.GetKey(KeyCode.S))
+                else if (Input.GetKey(KeyCode.S) || eventSys.currentSelectedGameObject == mobileMoveDown.gameObject)
                 {
                     Player.GetComponentInChildren<PlayerAnimationControllerV2>().AnimObj.SetBool("lowBounce", true);
                     Invoke("SetLowBounceFalse", 1);

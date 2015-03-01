@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 
 public class MovePlayer : MonoBehaviour 
 {
-    public Button mobileMoveUp;
-    public Button mobileMoveDown;
     public Button mobileMoveLeft;
     public Button mobileMoveRight;
     public EventSystem eventSys;
